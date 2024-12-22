@@ -1,0 +1,144 @@
+[
+    {
+      "attachments": [
+        {
+          "type": "attachment",
+          "content": {
+            "type": "Buffer",
+            "data": [
+              60,
+              109,
+              10
+            ]
+          },
+          "contentType": "application/octet-stream",
+          "partId": "2",
+          "release": null,
+          "contentDisposition": "attachment",
+          "filename": "lalaguna MVP.drawio",
+          "contentId": "<f_m4zxsdi10>",
+          "cid": "f_m4zxsdi10",
+          "headers": {},
+          "checksum": "2e11227cb182138e4d8d4b574085680f",
+          "size": 24018
+        }
+      ],
+      "headers": {},
+      "headerLines": [
+        {
+          "key": "return-path",
+          "line": "Return-Path: <ldepablo@gmail.com>"
+        },
+        {
+          "key": "delivered-to",
+          "line": "Delivered-To: lalagunadeltiempo@sevisible.es"
+        },
+        {
+          "key": "received",
+          "line": "Received: from mail-wr1-x42b.google.com (mail-wr1-x42b.google.com [IPv6:2a00:1450:4864:20::42b])\r\n\tby nl-srv-smtpin12.hostinger.io (mx.hostinger.com) with ESMTPS id 4YGV0M2zMlz9vBQB\r\n\tfor <lalagunadeltiempo@sevisible.es>; Sun, 22 Dec 2024 18:23:47 +0000 (UTC)"
+        },
+        {
+          "key": "arc-message-signature",
+          "line": "ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=sevisible.es;\r\n\ts=hostingermail1; t=1734891827;\r\n\th=from:from:reply-to:subject:subject:date:date:message-id:message-id:\r\n\t to:to:cc:mime-version:mime-version:content-type:content-type:\r\n\t dkim-signature; bh=omeJJBXbZWMGY/k+mp2FmRRlSfGYt2kDvht6gAwfsUc=;\r\n\tb=QibJQ/dgsDtAp82rfszb9fOK+xC2ZfcwPpcKGujC6htg5oWwzzm2cuw+FC+az2Sy74m+RO\r\n\tA4ULxn/HtQQubontXyNIe5lNSh2JySYQftqq/WZoHydC2yQF4vdSvdeT5rHATb8VJZl3wy\r\n\tLsDERjCPt+rnS3fvrJYzHi2DltDkR/Qn3YWqS+53zOLo3RWYbIZF9kjuT0UT1NuPTre+Mg\r\n\tKH1IkLQU7enTl98NbkuIvLkKVGcKwlc+9NP+JRgJ4wCLr0IwXYwFW5uuFr+xCtJ/2LxlqB\r\n\tBm4CWrVqpVIgHkGoR6BUMxk+4dY1xI7fke9YZbBo8hvzU4Hg/aw2wS9aVSdn8g=="
+        },
+        {
+          "key": "arc-authentication-results",
+          "line": "ARC-Authentication-Results: i=1;\r\n\tnl-srv-smtpin12.hostinger.io;\r\n\tdkim=pass header.d=gmail.com header.s=20230601 header.b=lwm70xOT;\r\n\tspf=pass (nl-srv-smtpin12.hostinger.io: domain of ldepablo@gmail.com designates 2a00:1450:4864:20::42b as permitted sender) smtp.mailfrom=ldepablo@gmail.com;\r\n\tdmarc=pass (policy=none) header.from=gmail.com"
+        },
+        {
+          "key": "arc-seal",
+          "line": "ARC-Seal: i=1; s=hostingermail1; d=sevisible.es; t=1734891827; a=rsa-sha256;\r\n\tcv=none;\r\n\tb=gYcebyCpcUaBudcEE9D/v5n+8oHiYiyF2xMS3eggWvyMkosk0RtEZpVYac10E/i4cNSTdI\r\n\tGKr+bnccXdST+lHoQsL5uLUZtCNkg6TuFecICxRbQINJeSGFVSMCsg9j0YnWSaP7qU9S7J\r\n\tRcIBFf7/QIHNIaLec49JI8ohzExD3BpmsREVldpIwOTEd1fRhSCtYj9lXzj87/om2aXYiK\r\n\tecBmUnCHImQImUYyIC6f5P+Q5PIRHHwIu/MSwiuo8LPEX9SYGqeaWWzBXiVZaKvGrftEWl\r\n\tG8c6fLPrtfziO/1zt9Yxpr7HdaRfxpEpIGQBTk87VLgM/aJmBaBfK2enTC5unQ=="
+        },
+        {
+          "key": "received",
+          "line": "Received: by mail-wr1-x42b.google.com with SMTP id ffacd0b85a97d-38632b8ae71so2688947f8f.0\r\n        for <lalagunadeltiempo@sevisible.es>; Sun, 22 Dec 2024 10:23:47 -0800 (PST)"
+        },
+        {
+          "key": "dkim-signature",
+          "line": "DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;\r\n        d=gmail.com; s=20230601; t=1734891826; x=1735496626; darn=sevisible.es;\r\n        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject\r\n         :date:message-id:reply-to;\r\n        bh=omeJJBXbZWMGY/k+mp2FmRRlSfGYt2kDvht6gAwfsUc=;\r\n        b=lwm70xOTBgAsp7hMW9irGczUnyaF5j7RgcG8Vef2mfJar0Vs8JFt9OWUy4Mq+gicJa\r\n         Q/pFa1z+U2SODDq2LQcMM1RqL/79ONlpoBMBxJ58q5ubX3llEo2WvyQkFq1uDrRpSIP9\r\n         LN2FvJ8EhXn+mOhYVN5IwRvnbtUhU1Hlv82VjrOxPGdSFhINs5R3/B7NiWlrxWeSezb6\r\n         IueV5fAwfbtw2edR1zREkMRJPgSuVxHOlDTFGcl571j0yk4C+BgcUNCiU7S0c/xqj9XA\r\n         pLciluYPhcxWyWQI1mNqi4EBbZ8Sag4VrhsNbwlDaqAWWyhE8iZ1TJE9dMmFnvbwOFLD\r\n         8thA=="
+        },
+        {
+          "key": "x-google-dkim-signature",
+          "line": "X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;\r\n        d=1e100.net; s=20230601; t=1734891826; x=1735496626;\r\n        h=to:subject:message-id:date:from:mime-version:x-gm-message-state\r\n         :from:to:cc:subject:date:message-id:reply-to;\r\n        bh=omeJJBXbZWMGY/k+mp2FmRRlSfGYt2kDvht6gAwfsUc=;\r\n        b=MfxvIdXxrp5fcWT+9xPiGL13LENaKLAbn3C9XlYW7IsW7ynD86SAnLa9imkPnznLVn\r\n         7J3yauoKSXOSexsTCCuNYzoRfeLWWgNAQrBzCbh3HpicnCTxd3Y7Hv4W8PbFcrrqNCkb\r\n         GK99zqDCUklS2HDJL5w14FQJiK9i67OkvFjqda330Bk3dlcjS3vkaeN+Ellfya27oMr1\r\n         P6vTcCxOQKctfLI4s6J0w231zSXcgLNJLAFWZ6HFnWddJ+S00IYnhfZbxdSC0pp54qVf\r\n         af8KBLGN3Wm/UbGpDhX3xXQAi2G/m64+nYyR7cvUjoJ3uxVPLwaBBnu+wzljtkxx8ViF\r\n         b5Hw=="
+        },
+        {
+          "key": "x-gm-message-state",
+          "line": "X-Gm-Message-State: AOJu0YzoZfu48WuEsCdi+Wy2RyJEAYFtVL7PVjYQtWL2q7dKGV41NNBQ\r\n\tMGfZ/VvBo1t5pfyPtJPvvMYYmN39nJGf++fk8w0D0hvTomivqHQKVY5BG5eyPSe8WozozKhgZGx\r\n\tinBq5HYq0MXu/HiZ0oIVBWwGdf4cYkw=="
+        },
+        {
+          "key": "x-gm-gg",
+          "line": "X-Gm-Gg: ASbGncuGGdHzzw1Vm9V7fNU7bNONPk2HGsHtuLSAQFIcDylyqdYarqovRGFRT0msUUt\r\n\tTwAsifwptZhND4/p2rn5Q0jKofyUcRjaS838O"
+        },
+        {
+          "key": "x-google-smtp-source",
+          "line": "X-Google-Smtp-Source: AGHT+IHKvFwsJ+EGC/8A/N17zXrjHi/LhWO1qGuL8dK1eKe7EAhPvBgocNrcdtfMGigAoIqfUsbHAoII4ce9XZnJv/0="
+        },
+        {
+          "key": "x-received",
+          "line": "X-Received: by 2002:a05:6000:470a:b0:385:f092:df2 with SMTP id\r\n ffacd0b85a97d-38a221faae4mr7422866f8f.34.1734891826085; Sun, 22 Dec 2024\r\n 10:23:46 -0800 (PST)"
+        },
+        {
+          "key": "mime-version",
+          "line": "MIME-Version: 1.0"
+        },
+        {
+          "key": "from",
+          "line": "From: Luis de Pablo <ldepablo@gmail.com>"
+        },
+        {
+          "key": "date",
+          "line": "Date: Sun, 22 Dec 2024 19:23:34 +0100"
+        },
+        {
+          "key": "message-id",
+          "line": "Message-ID: <CAAGL8TCxUKmhL+pf2mSgarCWbUOMgwv7BDtqYH1=64T50FwGYQ@mail.gmail.com>"
+        },
+        {
+          "key": "subject",
+          "line": "Subject: prueba 2"
+        },
+        {
+          "key": "to",
+          "line": "To: lalagunadeltiempo@sevisible.es"
+        },
+        {
+          "key": "content-type",
+          "line": "Content-Type: multipart/mixed; boundary=\"00000000000004d1f20629dffb7d\""
+        },
+        {
+          "key": "x-cm-envelope",
+          "line": "X-CM-Envelope: MS4xfOc8GSNHLPaNyJmTcaykmMYpvdSgXQ2QZLPuu5OiTnyhz8UiozLTipqN4GcJoBlkgvV5Spo0auC+qTFbKOWYEeA+LIKjJVvuKVWL31HnAoRDgs5bFf0s a4FH3e8hVgpRnEgG+bcUfZc42EoNcS2J0HxvkTNe/y7LM0QausR22l/SjCtC3dosKOCwC8jZhDu8tM8/LVM4P0G898HC5686R6DbecR3ke12H+JRV0gAMhbw TbzagwWjNhlRR50TmQJmjg=="
+        },
+        {
+          "key": "x-cm-analysis",
+          "line": "X-CM-Analysis: v=2.4 cv=ZIOFmm7b c=1 sm=1 tr=0 ts=67685933 a=SbfqGrNHyoH/Ej5xhIYmhg==:617 a=xqWC_Br6kY4A:10 a=RZcAm9yDv7YA:10 a=x7bEGLp0ZPQA:10 a=HkjY1Qy6oQgA:10 a=95EFz5htlIgA:10 a=ldk3_sQvMDuMx3MmiOUA:9 a=QEXdDO2ut3YA:10 a=ttNRFF0p4cEhcBDYllcA:9 a=ewzPvp_4Uw4A:10 a=Uz9EnhuHEG25YKoRyM-d:22 a=fwQ2GIwVGkFxZOUkocue:22 a=NWVoK91CQySWRX1oVYDe:22 a=st5SMFI68RnBMcEIwKaT:22 a=jMROYaktyPko46j5XlsI:22"
+        }
+      ],
+      "html": "<div dir=\"ltr\">body prueba 2</div>\n",
+      "text": "body prueba 2\n",
+      "textAsHtml": "<p>body prueba 2</p>",
+      "subject": "prueba 2",
+      "date": "2024-12-22T18:23:34.000Z",
+      "to": {
+        "value": [
+          {
+            "address": "lalagunadeltiempo@sevisible.es",
+            "name": ""
+          }
+        ],
+        "html": "<span class=\"mp_address_group\"><a href=\"mailto:lalagunadeltiempo@sevisible.es\" class=\"mp_address_email\">lalagunadeltiempo@sevisible.es</a></span>",
+        "text": "lalagunadeltiempo@sevisible.es"
+      },
+      "from": {
+        "value": [
+          {
+            "address": "ldepablo@gmail.com",
+            "name": "Luis de Pablo"
+          }
+        ],
+        "html": "<span class=\"mp_address_group\"><span class=\"mp_address_name\">Luis de Pablo</span> &lt;<a href=\"mailto:ldepablo@gmail.com\" class=\"mp_address_email\">ldepablo@gmail.com</a>&gt;</span>",
+        "text": "\"Luis de Pablo\" <ldepablo@gmail.com>"
+      },
+      "messageId": "<CAAGL8TCxUKmhL+pf2mSgarCWbUOMgwv7BDtqYH1=64T50FwGYQ@mail.gmail.com>"
+    }
+  ]

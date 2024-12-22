@@ -1,0 +1,36 @@
+service: email-extractor-project
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1
+
+functions:
+  emailExtractor:
+    handler: src/handler.handler
+    events:
+      - schedule:
+          rate: rate(1 hour)
+          enabled: true
+
+resources:
+  Resources:
+    EmailsTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: Emails
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 5
+          WriteCapacityUnits: 5
+
+plugins:
+  - serverless-offline
+
+package:
+  individually: true
