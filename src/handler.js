@@ -4,6 +4,7 @@ import util from 'util';
 import dotenv from 'dotenv';
 import AWS from 'aws-sdk';
 
+const RAW_ATTACHMENTS_FOLDER_NAME = 'raw-attachments';
 const s3 = new AWS.S3();
 
 dotenv.config(); // Cargar las variables de entorno
@@ -42,7 +43,6 @@ export const handler = async (event) => {
         console.log(`Found ${messages.length} messages.`);
 
         const emails = [];
-        const result = [];
 
         for (const item of messages) {
             const body = item.parts.find(part => part.which === '');
@@ -66,14 +66,13 @@ export const handler = async (event) => {
                     const resultingItem = {
                         subject: mail.subject,
                         from: mail.from.text,
-                        date: new Date(mail.date).getTime(),
+                        datetime: new Date(mail.date),
                         body: mail.text,
                         filename: attachment.filename,
                         content: attachment.content
                     };
                     console.log('resultingItem:', resultingItem);
-                    result.push(resultingItem);
-
+                    
                     const bucketName = 'sevisible-la-laguna-del-tiempo';
                     const data = attachment.content;
                     console.log('Starting method for S3 Uploading...');
@@ -108,9 +107,14 @@ export const handler = async (event) => {
 };
 
 const uploadToS3 = async (bucketName, resultingItem, attachment) => {
+    
+    const dateAsString = obtainDateAsString(resultingItem.datetime)
+    const timeAsString = obtainTimeAsString(resultingItem.datetime)
+    const key = `${RAW_ATTACHMENTS_FOLDER_NAME}/${dateAsString}/${timeAsString}/${resultingItem.filename}`
+    
     const params = {
         Bucket: bucketName,
-        Key: `${resultingItem.date}/${resultingItem.filename}`,
+        Key: key,
         Body: attachment
     };
     console.log('Starting S3 upload with params:', params);
@@ -124,3 +128,17 @@ const uploadToS3 = async (bucketName, resultingItem, attachment) => {
         console.error(`Error uploading file: ${err.message}`);
     }
 };
+
+function obtainTimeAsString(datetime) {
+    const hour = datetime.getUTCHours();
+    const minute = datetime.getUTCMinutes();
+    const seconds = datetime.getUTCSeconds();
+    return `${hour}${minute}${seconds}`;
+}
+
+function obtainDateAsString(datetime) {
+    const year = datetime.getUTCFullYear();
+    const month = datetime.getUTCMonth() + 1;
+    const dayOfMonth = datetime.getUTCDate();
+    return `${year}${month}${dayOfMonth}`;
+}
